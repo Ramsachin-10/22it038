@@ -1,0 +1,18 @@
+name: docker-pipeline-sachin
+on: push
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print your Register No
+        run: echo "Hello world - 22it038"
+
+      - name: Checkout
+        user: actions/Checkout@v4.2.2
+
+      - name: docker build
+        run:  docker build -t ramsachin038/ml-22it038 .
+
+      - name: docker images
+        run:  docker images
+        
